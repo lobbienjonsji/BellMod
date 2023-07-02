@@ -1,9 +1,11 @@
 package code.cards;
 
 import basemod.abstracts.CustomCard;
+import code.bells.AbstractBell;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Texture;
+import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
@@ -15,7 +17,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import code.CharacterFile;
+import code.TheSpecter;
 import code.util.CardArtRoller;
 
 import static code.ModFile.makeImagePath;
@@ -24,7 +26,7 @@ import static code.util.Wiz.atb;
 import static code.util.Wiz.att;
 
 public abstract class AbstractEasyCard extends CustomCard {
-
+    
     protected final CardStrings cardStrings;
 
     public int secondMagic;
@@ -40,7 +42,7 @@ public abstract class AbstractEasyCard extends CustomCard {
     private boolean needsArtRefresh = false;
 
     public AbstractEasyCard(final String cardID, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
-        this(cardID, cost, type, rarity, target, CharacterFile.Enums.TODO_COLOR);
+        this(cardID, cost, type, rarity, target, TheSpecter.Enums.SPECTER_LIGHT_BLUE);
     }
 
     public AbstractEasyCard(final String cardID, final int cost, final CardType type, final CardRarity rarity, final CardTarget target, final CardColor color) {
@@ -225,4 +227,15 @@ public abstract class AbstractEasyCard extends CustomCard {
     protected void upSecondDamage(int x) {
         upgradeSecondDamage(x);
     }
+    
+    public void onApplyDebuff() {}
+    
+    public void onSelectTarget(AbstractBell bell) {}
+    
+    public static class enums
+    {
+        @SpireEnum public static CardTags GHOSTLY;
+    }
 }
+
+

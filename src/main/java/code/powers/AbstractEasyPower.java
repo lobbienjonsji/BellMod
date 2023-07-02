@@ -1,5 +1,6 @@
 package code.powers;
 
+import code.bells.AbstractBell;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -59,4 +60,20 @@ public abstract class AbstractEasyPower extends AbstractPower {
             FontHelper.renderFontRightTopAligned(sb, FontHelper.powerAmountFont, Integer.toString(amount2), x, y + 15.0F * Settings.scale, fontScale, c);
         }
     }
+    
+    public int modifyBellPower(AbstractBell bell, int power)
+    {
+        return power;
+    }
+    
+    public int modifyBellPowerFinal(AbstractBell bell, int power)
+    {
+        return power;
+    }
+    
+    public void onToll(AbstractBell bell)
+    {}
+    
+    public void onSelectTarget(AbstractBell bell)
+    {}
 }

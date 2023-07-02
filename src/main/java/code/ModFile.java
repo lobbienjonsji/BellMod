@@ -4,17 +4,27 @@ import basemod.AutoAdd;
 import basemod.BaseMod;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
+import code.bells.AllBellTargetingHandler;
+import code.bells.BellHandler;
+import code.bells.BellTargetingHandler;
+import code.cards.specter_cards.HeartAttack;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
+import com.evacipated.cardcrawl.mod.stslib.patches.CustomTargeting;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.blue.Claw;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.localization.CardStrings;
-import com.megacrit.cardcrawl.localization.CharacterStrings;
-import com.megacrit.cardcrawl.localization.PowerStrings;
-import com.megacrit.cardcrawl.localization.RelicStrings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.localization.*;
+import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import code.cards.AbstractEasyCard;
 import code.cards.cardvars.SecondDamage;
@@ -22,6 +32,7 @@ import code.cards.cardvars.SecondMagicNumber;
 import code.relics.AbstractEasyRelic;
 
 import java.nio.charset.StandardCharsets;
+import java.util.Iterator;
 
 @SuppressWarnings({"unused", "WeakerAccess"})
 @SpireInitializer
@@ -30,16 +41,26 @@ public class ModFile implements
         EditRelicsSubscriber,
         EditStringsSubscriber,
         EditKeywordsSubscriber,
-        EditCharactersSubscriber {
+        EditCharactersSubscriber,
+        PostPlayerUpdateSubscriber,
+        PreRoomRenderSubscriber,
+        OnStartBattleSubscriber,
+        PostBattleSubscriber,
+        PostDeathSubscriber,
+        StartGameSubscriber,
+        OnPlayerTurnStartSubscriber,
+        PostInitializeSubscriber,
+        PostRenderSubscriber,
+        PostPowerApplySubscriber{
 
-    public static final String modID = "todomod"; //TODO: Change this.
-
+    public static final String modID = "thespecter";
+    public static BellHandler Bells = new BellHandler();
     public static String makeID(String idText) {
         return modID + ":" + idText;
     }
 
     public static Color characterColor = new Color(MathUtils.random(), MathUtils.random(), MathUtils.random(), 1); // This should be changed eventually
-
+    
     public static final String SHOULDER1 = modID + "Resources/images/char/mainChar/shoulder.png";
     public static final String SHOULDER2 = modID + "Resources/images/char/mainChar/shoulder2.png";
     public static final String CORPSE = modID + "Resources/images/char/mainChar/corpse.png";
@@ -54,11 +75,13 @@ public class ModFile implements
     private static final String CARD_ENERGY_L = modID + "Resources/images/1024/energy.png";
     private static final String CHARSELECT_BUTTON = modID + "Resources/images/charSelect/charButton.png";
     private static final String CHARSELECT_PORTRAIT = modID + "Resources/images/charSelect/charBG.png";
-
+    public static boolean isBellSelection = false;
     public static Settings.GameLanguage[] SupportedLanguages = {
             Settings.GameLanguage.ENG,
     };
-
+    public static int cardsEnteredDiscardPileThisTurn = 0;
+    
+    
     private String getLangString() {
         for (Settings.GameLanguage lang : SupportedLanguages) {
             if (lang.equals(Settings.language)) {
@@ -71,7 +94,7 @@ public class ModFile implements
     public ModFile() {
         BaseMod.subscribe(this);
 
-        BaseMod.addColor(CharacterFile.Enums.TODO_COLOR, characterColor, characterColor, characterColor,
+        BaseMod.addColor(TheSpecter.Enums.SPECTER_LIGHT_BLUE, characterColor, characterColor, characterColor,
                 characterColor, characterColor, characterColor, characterColor,
                 ATTACK_S_ART, SKILL_S_ART, POWER_S_ART, CARD_ENERGY_S,
                 ATTACK_L_ART, SKILL_L_ART, POWER_L_ART,
@@ -104,8 +127,8 @@ public class ModFile implements
 
     @Override
     public void receiveEditCharacters() {
-        BaseMod.addCharacter(new CharacterFile(CharacterFile.characterStrings.NAMES[1], CharacterFile.Enums.THE_TODO),
-                CHARSELECT_BUTTON, CHARSELECT_PORTRAIT, CharacterFile.Enums.THE_TODO);
+        BaseMod.addCharacter(new TheSpecter(TheSpecter.characterStrings.NAMES[1], TheSpecter.Enums.THE_SPECTER),
+                CHARSELECT_BUTTON, CHARSELECT_PORTRAIT, TheSpecter.Enums.THE_SPECTER);
     }
 
     @Override
@@ -144,6 +167,8 @@ public class ModFile implements
         BaseMod.loadCustomStringsFile(CharacterStrings.class, modID + "Resources/localization/" + getLangString() + "/Charstrings.json");
 
         BaseMod.loadCustomStringsFile(PowerStrings.class, modID + "Resources/localization/" + getLangString() + "/Powerstrings.json");
+    
+        BaseMod.loadCustomStringsFile(UIStrings.class, modID + "Resources/localization/" + getLangString() + "/UIstrings.json");
     }
 
     @Override
@@ -156,6 +181,104 @@ public class ModFile implements
             for (Keyword keyword : keywords) {
                 BaseMod.addKeyword(modID, keyword.PROPER_NAME, keyword.NAMES, keyword.DESCRIPTION);
             }
+        }
+    }
+    
+    @Override
+    public void receivePostPlayerUpdate() {
+        if(AbstractDungeon.player != null && !AbstractDungeon.isScreenUp) {
+            Bells.update();
+        }
+    }
+    
+    @Override
+    public void receivePreRoomRender(SpriteBatch sb) {
+        if(AbstractDungeon.player != null && !AbstractDungeon.isScreenUp) {
+            sb.setColor(Color.WHITE);
+            Bells.render(sb);
+        }
+    }
+    
+    @Override
+    public void receiveOnBattleStart(AbstractRoom abstractRoom) {
+        Bells.setup();
+    }
+    
+    @Override
+    public void receivePostBattle(AbstractRoom abstractRoom) {
+        Bells.clear();
+    }
+    
+    @Override
+    public void receivePostDeath()
+    {
+        Bells.clear();
+    }
+    
+    @Override
+    public void receiveStartGame() {
+        Bells.clear();
+    }
+    
+    @Override
+    public void receivePostInitialize() {
+        CustomTargeting.registerCustomTargeting(BellTargetingHandler.BELL, new BellTargetingHandler());
+        CustomTargeting.registerCustomTargeting(AllBellTargetingHandler.BELL_INCLUDING_ON_COOLDOWN, new AllBellTargetingHandler());
+    }
+    
+    @Override
+    public void receiveOnPlayerTurnStart() {
+        BellHandler.TolledBellThisTurn = false;
+        BellHandler.BellsTolledThisTurn = 0;
+        cardsEnteredDiscardPileThisTurn = 0;
+    }
+    
+    @Override
+    public void receivePostRender(SpriteBatch spriteBatch) {
+        if(isBellSelection)
+        {
+            Bells.renderTargetingUi(spriteBatch);
+        }
+    }
+    
+    @Override
+    public void receivePostPowerApplySubscriber(AbstractPower abstractPower, AbstractCreature abstractCreature, AbstractCreature abstractCreature1) {
+        if(abstractCreature != AbstractDungeon.player && abstractPower.type == AbstractPower.PowerType.DEBUFF)
+        {
+            AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
+                @Override
+                public void update() {
+                    Iterator var1 = AbstractDungeon.player.discardPile.group.iterator();
+    
+                    AbstractCard c;
+                    while(var1.hasNext()) {
+                        c = (AbstractCard)var1.next();
+                        if (c instanceof AbstractEasyCard) {
+                            ((AbstractEasyCard) c).onApplyDebuff();
+                        }
+                    }
+    
+                    var1 = AbstractDungeon.player.drawPile.group.iterator();
+    
+                    while(var1.hasNext()) {
+                        c = (AbstractCard)var1.next();
+                        if (c instanceof AbstractEasyCard) {
+                            ((AbstractEasyCard) c).onApplyDebuff();
+                        }
+                    }
+    
+                    var1 = AbstractDungeon.player.hand.group.iterator();
+    
+                    while(var1.hasNext()) {
+                        c = (AbstractCard)var1.next();
+                        if (c instanceof AbstractEasyCard) {
+                            ((AbstractEasyCard) c).onApplyDebuff();
+                        }
+                    }
+    
+                    this.isDone = true;
+                }
+            });
         }
     }
 }

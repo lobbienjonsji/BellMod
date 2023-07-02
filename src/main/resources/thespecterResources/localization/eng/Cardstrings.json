@@ -1,0 +1,338 @@
+{
+  "${ModID}:Strike": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "${ModID}:Defend": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block."
+  },
+  "${ModID}:Chime": {
+    "NAME": "Chime",
+    "DESCRIPTION": "${ModID}:Toll a bell. NL Gain !B! Block."
+  },
+  "${ModID}:Tune": {
+    "NAME": "Tune",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! ${ModID}:Harmony."
+  },
+  "${ModID}:Spook": {
+    "NAME": "Spook",
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Reverb."
+  },
+  "${ModID}:Ectostasis": {
+    "NAME": "Ectostasis",
+    "DESCRIPTION": "When this card enters your discard pile, gain !M! Block. NL ${ModID}:Reverb."
+  },
+  "${ModID}:BingBong": {
+    "NAME": "BING BONG",
+    "DESCRIPTION": "${ModID}:Toll a bell. NL Discard a random card. NL ${ModID}:Reverb.",
+    "UPGRADE_DESCRIPTION": "${ModID}:Toll a bell. NL Discard a card. NL ${ModID}:Reverb."
+  },
+  "${ModID}:BloodMoon": {
+    "NAME": "Blood Moon",
+    "DESCRIPTION": "Deal !D! damage. NL Increase the damage of the ${ModID}:Crimson_Bell by !M! this combat."
+  },
+  "${ModID}:GhostlyGrasp": {
+    "NAME": "Ghostly Grasp",
+    "DESCRIPTION": "Deal !D! damage. NL If the ${ModID}:Frozen_Bell is ringing, apply !M! Weak."
+  },
+  "${ModID}:HarmonicChime": {
+    "NAME": "Harmonic Chime",
+    "DESCRIPTION": "${ModID}:Toll a bell. NL Gain !M! ${ModID}:Harmony."
+  },
+  "${ModID}:TwinBolt": {
+    "NAME": "Twin Bolt",
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Reverb."
+  },
+  "${ModID}:FeedTheAbyss": {
+    "NAME": "Feed the Abyss",
+    "DESCRIPTION": "Put !M! cards from your draw pile into your discard pile. NL They cost 0 until played."
+  },
+  "${ModID}:GhostlyRiot": {
+    "NAME": "Ghostly Riot",
+    "DESCRIPTION": "Deal !D! damage !M! times. NL If the ${ModID}:Steel_Bell is ringing, Increase its power by 2 this combat."
+  },
+  "${ModID}:SpitefulBlow": {
+    "NAME": "Spiteful Blow",
+    "DESCRIPTION": "Only playable if this entered your discard pile this turn. NL Deal !D! damage. NL ${ModID}:Reverb.",
+    "EXTENDED_DESCRIPTION": [
+      "This card needs to enter my discard pile first!"
+    ]
+  },
+  "${ModID}:OneForNothing": {
+    "NAME": "One for Nothing",
+    "DESCRIPTION": "Discard your hand and draw pile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Discard your hand and draw pile. NL Exhaust."
+  },
+  "${ModID}:HammerDown": {
+    "NAME": "Hammer Down",
+    "DESCRIPTION": "Deal !D! damage twice. NL Whenever you ${ModID}:Toll the ${ModID}:Steel_Bell, return this from your discard pile to your hand."
+  },
+  "${ModID}:Lament": {
+    "NAME": "Lament",
+    "DESCRIPTION": "Gain !B! Block. NL Increase the power of your bells by !M! this turn. NL ${ModID}:Reverb."
+  },
+  "${ModID}:Cacophony": {
+    "NAME": "Cacophony",
+    "DESCRIPTION": "Whenever you ${ModID}:Toll a bell, deal !M! damage to ALL enemies."
+  },
+  "${ModID}:Float": {
+    "NAME": "Float",
+    "DESCRIPTION": "Gain !B! Block. NL ${ModID}:Reverb."
+  },
+  "${ModID}:EerieLaughter": {
+    "NAME": "Eerie Laughter",
+    "DESCRIPTION": "Gain !B! Block. NL Apply !M! Vulnerable to ALL enemies."
+  },
+  "${ModID}:TheBigBang": {
+    "NAME": "The Big Bang",
+    "DESCRIPTION": "Replace a bell with the ${ModID}:Big_Bang for !M! ${ModID}:Tolls."
+  },
+  "${ModID}:Incorporeal": {
+    "NAME": "Incorporeal",
+    "DESCRIPTION": "At the end of your turn, gain !M! Block. NL At the start of your turn, discard a card."
+  },
+  "${ModID}:SpectralBlast": {
+    "NAME": "Spectral Blast",
+    "DESCRIPTION": "Deal !D! damage and apply !M! ${ModID}:Haunted to ALL enemies."
+  },
+  "${ModID}:Torment": {
+    "NAME": "Torment",
+    "DESCRIPTION": "At the start of your turn, apply !M! ${ModID}:Haunted to ALL enemies."
+  },
+  "${ModID}:Miasma": {
+    "NAME": "Miasma",
+    "DESCRIPTION": "Deal !D! damage for each unique debuff on the enemy."
+  },
+  "${ModID}:Rummage": {
+    "NAME": "Rummage",
+    "DESCRIPTION": "Gain !B! Block. NL Put one of the top !M! cards from your draw pile into your hand. Discard the others."
+  },
+  "${ModID}:Malice": {
+    "NAME": "Malice",
+    "DESCRIPTION": "Deal !D! damage. Whenever the enemy loses HP, it loses !M! more."
+  },
+  "${ModID}:Raze": {
+    "NAME": "Raze",
+    "DESCRIPTION": "Deal !D! damage damage to ALL enemies !M! times."
+  },
+  "${ModID}:MidnightToll": {
+    "NAME": "Midnight Toll",
+    "DESCRIPTION": "${ModID}:Toll a Bell. NL Put !M! card containing \"Ghostly\" from your draw pile into your hand.",
+    "UPGRADE_DESCRIPTION": "${ModID}:Toll a Bell. NL Put !M! cards containing \"Ghostly\" from your draw pile into your hand."
+  },
+  "${ModID}:GhostlyBite": {
+    "NAME": "Ghostly Bite",
+    "DESCRIPTION": "Deal !D! damage. NL If the ${ModID}:Crimson_Bell is ringing, heal !M! HP. NL Exhaust."
+  },
+  "${ModID}:GhostlyMist": {
+    "NAME": "Ghostly Mist",
+    "DESCRIPTION": "Gain !B! Block. NL If the ${ModID}:Nimbus_Bell is ringing, draw !M! cards."
+  },
+  "${ModID}:GhostlyWave": {
+    "NAME": "Ghostly Wave",
+    "DESCRIPTION": "Deal !D! damage. NL If you ${ModID}:Tolled a bell this turn, gain !B! Block."
+  },
+  "${ModID}:HammerBash": {
+    "NAME": "Hammer Bash",
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust."
+  },
+  "${ModID}:Vortex": {
+    "NAME": "Vortex",
+    "DESCRIPTION": "Discard your hand. NL Draw !M! cards. NL ${ModID}:Reverb."
+  },
+  "${ModID}:Horror": {
+    "NAME": "Horror",
+    "DESCRIPTION": "Apply !M! ${ModID}:Haunted. NL Draw 1 card."
+  },
+  "${ModID}:HammerStrike": {
+    "NAME": "Hammer Strike",
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Toll a Bell."
+  },
+  "${ModID}:BellsOfDoom": {
+    "NAME": "Bells of Doom",
+    "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for each ${ModID}:Toll this combat."
+  },
+  "${ModID}:Bruise": {
+    "NAME": "Bruise",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! ${ModID}:Haunted."
+  },
+  "${ModID}:ResoundingBlows": {
+    "NAME": "Resounding Blows",
+    "DESCRIPTION": "Whenever you play an Attack, increase the power of your bells by !M! this turn."
+  },
+  "${ModID}:FeastOnFear": {
+    "NAME": "Feast on fear",
+    "DESCRIPTION": "Remove up to !M! ${ModID}:Haunted. NL Gain that much Energy.",
+    "UPGRADE_DESCRIPTION": "Trigger up to !M! ${ModID}:Haunted. NL Gain that much Energy."
+  },
+  "${ModID}:Mischief": {
+    "NAME": "Mischief",
+    "DESCRIPTION": "Apply !M! Weak and Vulnerable to each ${ModID}:Haunted enemy."
+  },
+  "${ModID}:HowlingStorm": {
+    "NAME": "Howling Storm",
+    "DESCRIPTION": "Gain !M! ${ModID}:Harmony. NL Add !M! charges to the ${ModID}:Nimbus_Bell."
+  },
+  "${ModID}:SweepingHammer": {
+    "NAME": "Sweeping Hammer",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL ${ModID}:Toll a bell."
+  },
+  "${ModID}:EchoingToll": {
+    "NAME": "Echoing Toll",
+    "DESCRIPTION": "${ModID}:Toll a bell. NL Repeat its effect X times.",
+    "UPGRADE_DESCRIPTION": "${ModID}:Toll a bell. NL Repeat its effect X + 1 times."
+  },
+  "${ModID}:OnBeat": {
+    "NAME": "On Beat",
+    "DESCRIPTION": "${ModID}:Toll a bell. NL If this consumes ${ModID}:Harmony, ${ModID}:Toll another bell."
+  },
+  "${ModID}:StrikeFromBeyond": {
+    "NAME": "Strike from Beyond",
+    "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for each card that entered the discard pile this turn."
+  },
+  "${ModID}:Poke": {
+    "NAME": "Poke",
+    "DESCRIPTION": "Deal !D! damage. NL Discard !M! card."
+  },
+  "${ModID}:Nostalgia": {
+    "NAME": "Nostalgia",
+    "DESCRIPTION": "Put !M! card you did not play this turn from your discard pile into your hand.",
+    "UPGRADE_DESCRIPTION": "Put !M! card you did not play this turn from your discard pile into your hand. NL ${ModID}:Reverb."
+  },
+  "${ModID}:WitchingHour": {
+    "NAME": "Witching Hour",
+    "DESCRIPTION": "Whenever you apply ${ModID}:Haunted, gain !M! Block."
+  },
+  "${ModID}:HeartAttack": {
+    "NAME": "Heart Attack",
+    "DESCRIPTION": "Deal !D! damage. NL Whenever you apply a debuff, increase this cards damage by !M! until played."
+  },
+  "${ModID}:CeaselessDread": {
+    "NAME": "Ceaseless Dread",
+    "DESCRIPTION": "Apply !M! ${ModID}:Haunted. NL Exhaust."
+  },
+  "${ModID}:PhantomPlague": {
+    "NAME": "Phantom Plague",
+    "DESCRIPTION": "Whenever you apply a different debuff, also apply !M! ${ModID}:Haunted."
+  },
+  "${ModID}:SmashToRubble": {
+    "NAME": "Smash to Rubble",
+    "DESCRIPTION": "Deal !D! damage. NL Discard !M! cards."
+  },
+  "${ModID}:SymphonyOfChimes": {
+    "NAME": "Symphony of Chimes",
+    "DESCRIPTION": "At the start of your turn, ${ModID}:Toll a bell."
+  },
+  "${ModID}:EldritchWhispers": {
+    "NAME": "Eldritch Whispers",
+    "DESCRIPTION": "Whenever ${ModID}:Reverb triggers on a card, reduce its cost to 0 until played."
+  },
+  "${ModID}:Jumpscare": {
+    "NAME": "Jumpscare",
+    "DESCRIPTION": "Apply !M! Weak. NL Apply !M! ${ModID}:Haunted. NL The enemy loses !M! Strength this turn."
+  },
+  "${ModID}:Nocturne": {
+    "NAME": "Nocturne",
+    "DESCRIPTION": "Gain !B! Block. NL Toll 2 bells."
+  },
+  "${ModID}:ChillTouch": {
+    "NAME": "Chill Touch",
+    "DESCRIPTION": "Deal !D! damage. NL The ${ModID}:Frozen_Bell grants !M! additional Block on the next ${ModID}:Toll."
+  },
+  "${ModID}:Necrosis": {
+    "NAME": "Necrosis",
+    "DESCRIPTION": "Whenever the enemy attacks, it loses !M! HP. NL Exhaust."
+  },
+  "${ModID}:WildHunt": {
+    "NAME": "Wild Hunt",
+    "DESCRIPTION": "Damage triggers !M! additional stack of ${ModID}:Haunted.",
+    "UPGRADE_DESCRIPTION": "Damage triggers !M! additional stacks of ${ModID}:Haunted."
+  },
+  "${ModID}:Melodrama": {
+    "NAME": "Melodrama",
+    "DESCRIPTION": "Increase the power of ALL of your bells by !M! this combat. NL Exhaust."
+  },
+  "${ModID}:Polish": {
+    "NAME": "Polish",
+    "DESCRIPTION": "Increase the power of a bell by !M! this combat."
+  },
+  "${ModID}:BoneRattle": {
+    "NAME": "Bone Rattle",
+    "DESCRIPTION": "Deal !D! damage twice. NL gain !M! ${ModID}:Harmony."
+  },
+  "${ModID}:SoulHarvest": {
+    "NAME": "Soul Harvest",
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy is ${ModID}:Haunted, draw !M! cards."
+  },
+  "${ModID}:UnbearableNoise": {
+    "NAME": "Unbearable Noise",
+    "DESCRIPTION": "Gain !M! ${ModID}:Harmony X times."
+  },
+  "${ModID}:Bloodshed": {
+    "NAME": "Bloodshed",
+    "DESCRIPTION": "Deal !D! damage. NL Your next attack deals !M! additional damage."
+  },
+  "${ModID}:GhostlyMayhem": {
+    "NAME": "Ghostly Mayhem",
+    "DESCRIPTION": "Play the top card of your draw pile. Repeat for each ${ModID}:Toll this turn.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (!M! time.)",
+      " NL (!M! times.)"
+    ]
+  },
+  "${ModID}:DarkSkies": {
+    "NAME": "Dark Skies",
+    "DESCRIPTION": "Deal !D! damage to a random enemy for each card in your hand.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (!M! time.)",
+      " NL (!M! times.)"
+    ]
+  },
+  "${ModID}:Paranormal": {
+    "NAME": "Paranormal",
+    "DESCRIPTION": "At the start of your turn, gain [E] and discard a card.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, gain [E] and discard a card."
+  },
+  "${ModID}:GateToHades": {
+    "NAME": "Gate to Hades",
+    "DESCRIPTION": "Deal !D! damage. NL For each other card in your hand, lose !M! HP.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (",
+      " HP)"
+    ]
+  },
+  "${ModID}:NecroticTouch": {
+    "NAME": "Necrotic Touch",
+    "DESCRIPTION": "Apply !M! Vulnerable. NL Apply !M! ${ModID}:Haunted."
+  },
+  "${ModID}:ShroudInDarkness": {
+    "NAME": "Shroud in Darkness",
+    "DESCRIPTION": "Gain !B! Block. NL When this card enters your discard pile, NL apply !M! ${ModID}:Haunted to ALL enemies."
+  },
+  "${ModID}:CloakSweep": {
+    "NAME": "Cloak Sweep",
+    "DESCRIPTION": "Deal !D! damage Twice. Draw !M! card. NL ${ModID}:Reverb."
+  },
+  "${ModID}:PainAndSorrow": {
+    "NAME": "Pain and Sorrow",
+    "DESCRIPTION": "Whenever you ${ModID}:Toll the ${ModID}:Crimson_Bell, repeat its effect !M! time.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you ${ModID}:Toll the ${ModID}:Crimson_Bell, repeat its effect !M! time."
+  },
+  "${ModID}:GrimDirge": {
+    "NAME": "Grim Dirge",
+    "DESCRIPTION": "Apply !M! ${ModID}:Haunted to ALL enemies. Enemies lose !M! more HP from ${ModID}:Haunted this combat."
+  },
+  "${ModID}:CrimsonBloom": {
+    "NAME": "Crimson Bloom",
+    "DESCRIPTION": "Increase the damage of the ${ModID}:Crimson_Bell by !M! this combat."
+  },
+  "${ModID}:GargoyleForm": {
+    "NAME": "Gargoyle Form",
+    "DESCRIPTION": "Whenever you apply a debuff, your next attack deals !M! additional damage."
+  },
+  "${ModID}:BellRingersFury": {
+    "NAME": "Bell Ringers Fury",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! ${ModID}:Harmony. NL ${ModID}:Reverb."
+  }
+}

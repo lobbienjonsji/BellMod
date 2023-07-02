@@ -1,0 +1,88 @@
+[
+  {
+    "PROPER_NAME": "TODO",
+    "NAMES": [
+      "todo",
+      "todos"
+    ],
+    "DESCRIPTION": "TODO: Make your own epic keywords"
+  },
+  {
+    "PROPER_NAME": "Toll",
+    "NAMES": [
+      "toll",
+      "tolled",
+      "tolls",
+      "tolls."
+    ],
+    "DESCRIPTION": "Target a bell to activate its effect. You cannot #yToll the same bell twice in a row."
+  },
+  {
+    "PROPER_NAME": "Harmony",
+    "NAMES": [
+      "harmony"
+    ],
+    "DESCRIPTION": "Increases the #bpower of your bells by #b50%. Reduced by #b1 after each #yToll."
+  },
+  {
+    "PROPER_NAME": "Reverb",
+    "NAMES": [
+      "reverb"
+    ],
+    "DESCRIPTION": "Once per turn, if this enters your discard pile #rduring your turn, put it into your hand."
+  },
+  {
+    "PROPER_NAME": "Crimson Bell",
+    "NAMES": [
+      "Crimson Bell",
+      "crimson_bell"
+    ],
+    "DESCRIPTION": "Deals #b6 damage to a random enemy."
+  },
+  {
+    "PROPER_NAME": "Frozen Bell",
+    "NAMES": [
+      "Frozen Bell",
+      "frozen_bell"
+    ],
+    "DESCRIPTION": "Grants #b4 Block."
+  },
+  {
+    "PROPER_NAME": "Steel Bell",
+    "NAMES": [
+      "Steel Bell",
+      "steel_bell"
+    ],
+    "DESCRIPTION": "Increases the damage of your next Attack by #b4."
+  },
+  {
+    "PROPER_NAME": "Nimbus Bell",
+    "NAMES": [
+      "Nimbus Bell",
+      "nimbus_bell"
+    ],
+    "DESCRIPTION": "Deals #b8 damage to ALL enemies. Needs to be charged."
+  },
+  {
+    "PROPER_NAME": "The Big Bang",
+    "NAMES": [
+      "Big Bang",
+      "big_bang"
+    ],
+    "DESCRIPTION": "Deals #b22 damage to ALL enemies."
+  },
+  {
+    "PROPER_NAME": "Firebell",
+    "NAMES": [
+      "firebell"
+    ],
+    "DESCRIPTION": "Grants #b4 #yBlock and Increases the damage of your next Attack by #b4."
+  },
+  {
+    "PROPER_NAME": "Haunted",
+    "NAMES": [
+     "haunted"
+    ],
+    "DESCRIPTION": "When a #yHaunted creature takes damage, it loses #b4 HP and #r1 #yHaunted."
+  }
+]

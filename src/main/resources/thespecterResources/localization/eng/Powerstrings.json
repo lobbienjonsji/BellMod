@@ -1,0 +1,152 @@
+{
+  "${ModID}:ExampleTwoAmountPower": {
+    "NAME": "Example 2",
+    "DESCRIPTIONS": [
+      "At the start of your turn, gain #b",
+      " #yStrength and #b",
+      " #yDexterity."
+    ]
+  },
+  "${ModID}:HarmonyPower": {
+    "NAME": "Harmony",
+    "DESCRIPTIONS": [
+      "The power of your bells is increased by #b50%"
+    ]
+  },
+  "${ModID}:CacophonyPower": {
+    "NAME": "Cacophony",
+    "DESCRIPTIONS": [
+      "Whenever you #yToll a bell, deal #b",
+      " damage to ALL enemies."
+    ]
+  },
+  "${ModID}:DiscardEachTurnPower": {
+    "NAME": "Discard each turn",
+    "DESCRIPTIONS": [
+      "At the start of your turn, discard #b",
+      " card.",
+      " cards."
+    ]
+  },
+  "${ModID}:HauntedPower": {
+    "NAME": "Haunted",
+    "DESCRIPTIONS": [
+      "When damaged or triggered, loses #b",
+      " Hp, then reduce this power by #b1."
+    ]
+  },
+  "${ModID}:TormentPower": {
+    "NAME": "Torment",
+    "DESCRIPTIONS": [
+      "At the start of your turn, apply #b",
+      " #yHaunted to ALL enemies."
+    ]
+  },
+  "${ModID}:MalicePower": {
+    "NAME": "Malice",
+    "DESCRIPTIONS": [
+      "Whenever this creature loses Hp, it loses #b",
+      " more."
+    ]
+  },
+  "${ModID}:TempRetainPower": {
+    "NAME": "Retain",
+    "DESCRIPTIONS": [
+      "At the end of this turn, #yRetain #b",
+      " card.",
+      " cards."
+    ]
+  },
+  "${ModID}:ResoundingBlowsPower": {
+    "NAME": "Resounding Blows",
+    "DESCRIPTIONS": [
+      "Whenever you play an attack, increase the power of your bells by #b",
+      "this turn."
+    ]
+  },
+  "${ModID}:WitchingHourPower": {
+    "NAME": "Witching Hour",
+    "DESCRIPTIONS": [
+      "Whenever you apply #yHaunted, gain #b",
+      " #yBlock."
+    ]
+  },
+  "${ModID}:PhantomPlaguePower": {
+    "NAME": "PhantomPlaguePower",
+    "DESCRIPTIONS": [
+      "Whenever you apply a different debuff, also apply #b",
+      " #yHaunted."
+    ]
+  },
+  "${ModID}:SymphonyOfChimesPower": {
+    "NAME": "Symphony of Chimes",
+    "DESCRIPTIONS": [
+      "At the start of your turn, toll #b",
+      " #yBell.",
+      " #yBells"
+    ]
+  },
+  "${ModID}:EldritchWhispersPower": {
+    "NAME": "Eldritch Whispers",
+    "DESCRIPTIONS": [
+      "Whenever #yReverb triggers on a card, reduce its cost to #b",
+      " until played."
+    ]
+  },
+  "${ModID}:ChillTouchPower": {
+    "NAME": "Chill Touch",
+    "DESCRIPTIONS": [
+      "The next #b",
+      " times you toll the #yFrozen #yBell, the target takes damage equal to your Block."
+    ]
+  },
+  "${ModID}:NecrosisPower": {
+    "NAME": "Necrosis",
+    "DESCRIPTIONS": [
+      "When the target attacks, it loses #b",
+      " HP."
+    ]
+  },
+  "${ModID}:WildHuntPower": {
+    "NAME": "Wild Hunt",
+    "DESCRIPTIONS": [
+      "Your attacks trigger #b",
+      " additional stack of #yHaunted.",
+      " additional stacks of #yHaunted."
+    ]
+  },
+  "${ModID}:ParanormalPower": {
+    "NAME": "Paranormal",
+    "DESCRIPTIONS": [
+      "At the start of your turn, gain"
+    ]
+  },
+  "${ModID}:PainAndSorrowPower": {
+    "NAME": "Pain and Sorrow",
+    "DESCRIPTIONS": [
+      "Whenever you #yToll the #yCrimson #yBell, repeat its effect #b",
+      " time.",
+      " times"
+    ]
+  },
+  "${ModID}:LamentPower": {
+    "NAME": "Lament",
+    "DESCRIPTIONS": [
+      "The power of your bells is increased by #b",
+      " this turn."
+    ]
+  },
+  "${ModID}:GargoyleFormPower": {
+    "NAME": "Gargoyle Form",
+    "DESCRIPTIONS": [
+      "Whenever you apply a debuff, increase the damage of your next attack by #b"
+    ]
+  },
+  "${ModID}:GrimDirgePower": {
+    "NAME": "Grim Dirge",
+    "DESCRIPTIONS": [
+      "Loses #b",
+      " more HP from #yHaunted this combat."
+    ]
+  }
+}

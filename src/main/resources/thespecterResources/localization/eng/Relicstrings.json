@@ -1,0 +1,9 @@
+{
+  "${ModID}:DeathKnell": {
+    "NAME": "Death Knell",
+    "FLAVOR": "\"I still remember the day it happened\".",
+    "DESCRIPTIONS": [
+      "At the start of your #b2nd turn, put the bottom #b2 cards from your discard pile into your hand."
+    ]
+  }
+}

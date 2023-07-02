@@ -1,0 +1,73 @@
+{
+  "${ModID}:FrozenBell": {
+    "TEXT": [
+      "Frozen Bell",
+      "Gain #b",
+      " #yBlock."
+    ]
+  },
+  "${ModID}:CrimsonBell": {
+    "TEXT": [
+      "Crimson Bell",
+      "Deal #b",
+      " damage to a random enemy."
+    ]
+  },
+  "${ModID}:SteelBell": {
+    "TEXT": [
+      "Steel Bell",
+      "Your next attack deals #b",
+      " additional damage."
+    ]
+  },
+  "${ModID}:NimbusBell": {
+    "TEXT": [
+      "Nimbus Bell",
+      "Spend #p12 charges to deal #b",
+      " damage to ALL enemies twice. NL Gain #p1 charge after a card enters your discard pile."
+    ]
+  },
+  "${ModID}:FireBell": {
+    "TEXT": [
+      "Firebell",
+      "Gain #b",
+      " #yBlock. NL Your next Attack deals #b",
+      " additional damage."
+    ]
+  },
+  "${ModID}:BigBang": {
+    "TEXT": [
+      "The Big Bang",
+      "Deal #b",
+      " damage to ALL enemies."
+    ]
+  },
+  "${ModID}:Haunted": {
+    "TEXT": [
+      "Haunted",
+      "When attacked, a Haunted creature loses #b4 Hp and #yHaunted is reduced by #b1."
+    ]
+  },
+  "${ModID}:Block": {
+  "TEXT": [
+    "Block",
+    "Until next turn, prevents damage."
+  ]
+  },
+  "${ModID}:FeedTheAbyssAction": {
+    "TEXT": [
+      "Choose which card to move.",
+      "Choose which cards to move."
+    ]
+  },
+  "${ModID}:RummageAction": {
+    "TEXT": [
+      "Choose which card to add to your hand."
+    ]
+  },
+  "${ModID}:TollBellAction": {
+    "TEXT": [
+      "This bell is already ringing! NL I need to Toll a different bell!"
+    ]
+  }
+}

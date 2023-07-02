@@ -1,0 +1,13 @@
+{
+  "${ModID}:TheSpecter": {
+    "NAMES": [
+      "The Specter",
+      "the Specter"
+    ],
+    "TEXT": [
+      "The former bell-ringer of the spire. Sought exile after its corruption and now returns to haunt its towers.",
+      "",
+      "Navigating an unlit street, you come across several hooded figures in the midst of some dark ritual. As you approach, they turn to you in eerie unison. The tallest among them bares fanged teeth and extends a long, pale hand towards you. NL ~\"Join~ ~us~ ~noisy~ ~one,~ ~and~ ~feel~ ~the~ ~warmth~ ~of~ ~the~ ~Spire.\"~"
+    ]
+  }
+}
