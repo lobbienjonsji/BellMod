@@ -38,6 +38,6 @@ public class HarmonicChime extends AbstractEasyCard {
             target = ModFile.Bells.getActiveRandomBell();
         }
         addToBot(new TollBellAction(target));
-        addToBot(new ApplyPowerAction(abstractPlayer, abstractPlayer, new HarmonyPower(abstractMonster, magicNumber)));
+        addToBot(new ApplyPowerAction(abstractPlayer, abstractPlayer, new HarmonyPower(abstractPlayer, magicNumber)));
     }
 }

@@ -36,6 +36,6 @@ public class ChillTouch  extends AbstractEasyCard {
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         dmg(abstractMonster, AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
-        addToTop(new ApplyPowerAction(abstractPlayer, abstractPlayer, new ChillTouchPower(abstractPlayer, magicNumber)));
+        addToBot(new ApplyPowerAction(abstractPlayer, abstractPlayer, new ChillTouchPower(abstractPlayer, magicNumber)));
     }
 }

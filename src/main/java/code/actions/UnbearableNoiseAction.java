@@ -30,7 +30,7 @@ public class UnbearableNoiseAction extends AbstractGameAction {
         }
         
         if (effect > 0) {
-            addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new HarmonyPower(AbstractDungeon.player, magic)));
+            addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new HarmonyPower(AbstractDungeon.player, magic)));
             if (!this.freeToPlayOnce) {
                 AbstractDungeon.player.energy.use(EnergyPanel.totalCount);
             }

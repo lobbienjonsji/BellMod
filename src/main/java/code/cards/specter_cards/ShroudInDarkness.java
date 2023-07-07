@@ -27,7 +27,6 @@ public class ShroudInDarkness extends OnEnterDiscardPileCard {
     public ShroudInDarkness() {
         super(ID, COST, TYPE, RARITY, TARGET);
         baseMagicNumber = magicNumber = BASE_MAGIC;
-        CardModifierManager.addModifier(this, new ReverbMod());
         this.baseBlock = BASE_BLOCK;
     }
     
@@ -49,8 +48,4 @@ public class ShroudInDarkness extends OnEnterDiscardPileCard {
         }
     }
     
-    public void triggerOnGlowCheck() {
-        this.glowColor = ((ReverbMod) (CardModifierManager.getModifiers(this, ReverbMod.ID).get(0))).isActive() ?
-                AbstractCard.GOLD_BORDER_GLOW_COLOR : AbstractCard.BLUE_BORDER_GLOW_COLOR;
-    }
 }

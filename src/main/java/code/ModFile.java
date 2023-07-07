@@ -76,6 +76,7 @@ public class ModFile implements
     private static final String CHARSELECT_BUTTON = modID + "Resources/images/charSelect/charButton.png";
     private static final String CHARSELECT_PORTRAIT = modID + "Resources/images/charSelect/charBG.png";
     public static boolean isBellSelection = false;
+    public static boolean ReverbActive = false;
     public static Settings.GameLanguage[] SupportedLanguages = {
             Settings.GameLanguage.ENG,
     };
@@ -231,6 +232,7 @@ public class ModFile implements
         BellHandler.TolledBellThisTurn = false;
         BellHandler.BellsTolledThisTurn = 0;
         cardsEnteredDiscardPileThisTurn = 0;
+        ReverbActive = true;
     }
     
     @Override

@@ -177,7 +177,7 @@ public abstract class AbstractBell {
                 false, false);
         if(charges >= 0)
         {
-            FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, Integer.toString(charges), this.cX + 48.0f * Settings.scale, this.cY - 58.0f * Settings.scale, this.c,0.7F);
+            FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, Integer.toString(charges), this.cX + 48.0f * Settings.scale, this.cY - 58.0f * Settings.scale, Color.MAGENTA,0.7F);
         }
 
         this.hb.render(sb);

@@ -32,7 +32,7 @@ public class NecroticTouch  extends AbstractEasyCard {
     
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        addToTop(new ApplyPowerAction(abstractMonster, abstractPlayer, new VulnerablePower(abstractMonster, magicNumber, false)));
-        addToTop(new ApplyPowerAction(abstractMonster, abstractPlayer, new HauntedPower(abstractMonster, magicNumber)));
+        addToBot(new ApplyPowerAction(abstractMonster, abstractPlayer, new VulnerablePower(abstractMonster, magicNumber, false)));
+        addToBot(new ApplyPowerAction(abstractMonster, abstractPlayer, new HauntedPower(abstractMonster, magicNumber)));
     }
 }

@@ -56,7 +56,7 @@ public class GateToHades extends AbstractEasyCard {
         
         this.rawDescription = cardStrings.DESCRIPTION;
         if (count >= 1) {
-            this.rawDescription = this.rawDescription + cardStrings.EXTENDED_DESCRIPTION[0] + count + cardStrings.EXTENDED_DESCRIPTION[1];
+            this.rawDescription = this.rawDescription + cardStrings.EXTENDED_DESCRIPTION[0] + count * magicNumber + cardStrings.EXTENDED_DESCRIPTION[1];
         }
         
         this.initializeDescription();

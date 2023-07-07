@@ -1,6 +1,7 @@
 package code.cards.cardvars;
 
 import basemod.abstracts.AbstractCardModifier;
+import code.ModFile;
 import code.powers.EldritchWhispersPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -34,14 +35,16 @@ public class ReverbMod extends AbstractCardModifier {
             public void update() {
                 if(AbstractDungeon.player.discardPile.contains(card) &&
                         !AbstractDungeon.actionManager.turnHasEnded &&
-                        !AbstractDungeon.player.isEndingTurn && isActive) {
+                        !AbstractDungeon.player.isEndingTurn &&
+                        !AbstractDungeon.player.endTurnQueued &&
+                        !isActive && ModFile.ReverbActive) {
                     AbstractDungeon.player.discardPile.moveToHand(card);
                     if(AbstractDungeon.player.hasPower(EldritchWhispersPower.POWER_ID) && card.cost > 0)
                     {
                         card.freeToPlayOnce = true;
                     }
+                    isActive = false;
                 }
-                isActive = false;
                 isDone = true;
             }
         });

@@ -61,7 +61,7 @@
       "Nimbus Bell",
       "nimbus_bell"
     ],
-    "DESCRIPTION": "Deals #b8 damage to ALL enemies. Needs to be charged."
+    "DESCRIPTION": "Deals #b6 damage to ALL enemies twice. Needs to be charged."
   },
   {
     "PROPER_NAME": "The Big Bang",

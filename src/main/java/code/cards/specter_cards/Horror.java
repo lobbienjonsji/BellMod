@@ -32,7 +32,7 @@ public class Horror extends AbstractEasyCard {
     
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        addToTop(new ApplyPowerAction(abstractMonster, abstractPlayer, new HauntedPower(abstractMonster, magicNumber)));
-        addToTop(new DrawCardAction(DRAW));
+        addToBot(new ApplyPowerAction(abstractMonster, abstractPlayer, new HauntedPower(abstractMonster, magicNumber)));
+        addToBot(new DrawCardAction(DRAW));
     }
 }

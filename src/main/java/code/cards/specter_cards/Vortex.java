@@ -4,6 +4,7 @@ import basemod.helpers.CardModifierManager;
 import code.cards.cardvars.ReverbMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DiscardAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -35,10 +36,11 @@ public class Vortex extends OnEnterDiscardPileCard {
         addToBot(new AbstractGameAction() {
             @Override
             public void update() {
-                this.addToTop(new DiscardAction(this.target, this.target, abstractPlayer.hand.size(), true));
+                this.addToTop(new DiscardAction(abstractPlayer, abstractPlayer, abstractPlayer.hand.size(), true));
                 isDone = true;
             }
         });
+        addToBot(new DrawCardAction(magicNumber));
     }
     
     public void triggerOnGlowCheck() {

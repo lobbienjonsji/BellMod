@@ -1,5 +1,6 @@
 package code.powers;
 
+import code.bells.AbstractBell;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -24,7 +25,9 @@ public class CacophonyPower extends AbstractEasyPower{
         this.description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
     }
     
-    public void onToll()
+    
+    @Override
+    public void onToll(AbstractBell bell)
     {
         this.addToBot(new DamageAllEnemiesAction(null, DamageInfo.createDamageMatrix(this.amount, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.FIRE, true));
     }

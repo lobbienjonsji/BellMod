@@ -16,7 +16,6 @@ public class GrimDirgePower extends AbstractEasyPower{
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-    public static final int HP_LOSS = 4;
     
     public GrimDirgePower(AbstractCreature owner, int amount) {
         super(POWER_ID, NAME, PowerType.DEBUFF, false, owner, amount);
@@ -24,6 +23,6 @@ public class GrimDirgePower extends AbstractEasyPower{
     
     @Override
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0] + HP_LOSS + DESCRIPTIONS[1];
+        this.description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
     }
 }

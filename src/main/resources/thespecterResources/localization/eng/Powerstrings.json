@@ -45,7 +45,7 @@
   "${ModID}:MalicePower": {
     "NAME": "Malice",
     "DESCRIPTIONS": [
-      "Whenever this creature loses Hp, it loses #b",
+      "Whenever this creature loses HP, it loses #b",
       " more."
     ]
   },
@@ -61,7 +61,7 @@
     "NAME": "Resounding Blows",
     "DESCRIPTIONS": [
       "Whenever you play an attack, increase the power of your bells by #b",
-      "this turn."
+      " this turn."
     ]
   },
   "${ModID}:WitchingHourPower": {

@@ -114,7 +114,7 @@
   },
   "${ModID}:Raze": {
     "NAME": "Raze",
-    "DESCRIPTION": "Deal !D! damage damage to ALL enemies !M! times."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies !M! times."
   },
   "${ModID}:MidnightToll": {
     "NAME": "Midnight Toll",
@@ -162,7 +162,7 @@
     "DESCRIPTION": "Whenever you play an Attack, increase the power of your bells by !M! this turn."
   },
   "${ModID}:FeastOnFear": {
-    "NAME": "Feast on fear",
+    "NAME": "Feast on Fear",
     "DESCRIPTION": "Remove up to !M! ${ModID}:Haunted. NL Gain that much Energy.",
     "UPGRADE_DESCRIPTION": "Trigger up to !M! ${ModID}:Haunted. NL Gain that much Energy."
   },
@@ -251,7 +251,7 @@
   },
   "${ModID}:Melodrama": {
     "NAME": "Melodrama",
-    "DESCRIPTION": "Increase the power of ALL of your bells by !M! this combat. NL Exhaust."
+    "DESCRIPTION": "Increase the power of your bells by !M! this combat. NL Exhaust."
   },
   "${ModID}:Polish": {
     "NAME": "Polish",
@@ -312,7 +312,7 @@
   },
   "${ModID}:CloakSweep": {
     "NAME": "Cloak Sweep",
-    "DESCRIPTION": "Deal !D! damage Twice. Draw !M! card. NL ${ModID}:Reverb."
+    "DESCRIPTION": "Deal !D! damage twice. Draw !M! card. NL ${ModID}:Reverb."
   },
   "${ModID}:PainAndSorrow": {
     "NAME": "Pain and Sorrow",

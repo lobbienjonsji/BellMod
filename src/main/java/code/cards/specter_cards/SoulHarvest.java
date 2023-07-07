@@ -36,16 +36,15 @@ public class SoulHarvest extends AbstractEasyCard {
     
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-       
         addToBot(new AbstractGameAction() {
             @Override
             public void update() {
                 dmgTop(abstractMonster, AttackEffect.SLASH_DIAGONAL);
-                if (this.target != null && this.target.hasPower(HauntedPower.POWER_ID)) {
-                    this.addToTop(new DrawCardAction(AbstractDungeon.player, magicNumber));
-                }
                 isDone = true;
             }
         });
+        if (abstractMonster != null && abstractMonster.hasPower(HauntedPower.POWER_ID)) {
+            this.addToBot(new DrawCardAction(AbstractDungeon.player, magicNumber));
+        }
     }
 }

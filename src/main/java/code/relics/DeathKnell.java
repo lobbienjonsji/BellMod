@@ -2,6 +2,7 @@ package code.relics;
 
 import code.TheSpecter;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 import static code.ModFile.makeID;
@@ -23,6 +24,7 @@ public class DeathKnell extends AbstractEasyRelic {
             ++this.counter;
         }
         if (this.counter == 2) {
+            addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
             addToTop(new AbstractGameAction() {
                 @Override
                 public void update() {
